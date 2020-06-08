@@ -1,0 +1,93 @@
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9sz5l[0m
+{"level":"info","ts":1591659208.2896976,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591659208.2902758,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ltvdv[0m
+{"level":"info","ts":1591659210.7647443,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591659210.774155,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hgautam-photosapp-master-releas-65gnx-hsr2r[0m
+{"level":"info","ts":1591659254.487321,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591659255.1280723,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/photosapp.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9403404abb77596c127917f1a36a19198b9eda27
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.3 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 145 packages from 153 contributors and audited 146 packages in 4.412s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (40ms)
+
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0608 23:34:25.302671      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0608 23:34:25.676236      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0608 23:34:25.679898      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/integrated-oath-278216/cache:33b7a3172660fa5a51341ac914217ee3e7b1f97baff95e2d0abc2b031fe2b08b... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0011] ENV PORT 8080                                
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] EXPOSE 8080                                  
+[36mINFO[0m[0011] cmd: EXPOSE                                  
+[36mINFO[0m[0011] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] WORKDIR /usr/src/app                         
+[36mINFO[0m[0011] cmd: workdir                                 
+[36mINFO[0m[0011] Changed working directory to /usr/src/app    
+[36mINFO[0m[0011] Creating directory /usr/src/app              
+[36mINFO[0m[0011] Resolving 1 paths                            
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0015] COPY . .                                     
+[36mINFO[0m[0016] Resolving 3444 paths                         
+[36mINFO[0m[0016] Taking snapshot of files...                  
+[36mINFO[0m[0017] Pushing layer gcr.io/integrated-oath-278216/cache:33b7a3172660fa5a51341ac914217ee3e7b1f97baff95e2d0abc2b031fe2b08b to cache now 
+[36mINFO[0m[0017] CMD ["npm", "start"]                         
+[36mINFO[0m[0017] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mhgautam-photosapp-master-releas-65gnx-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+/bin/sh: line 0: cd: /workspace/source/charts/photosapp: No such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-changelog'. The execution of the pipeline has stopped.[0m
