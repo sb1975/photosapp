@@ -1,5 +1,5 @@
 {
-  "name": "skiapp",
+  "name": "photosapp",
   "version": "1.0.0",
   "description": "A full NodeJS Jenkins X QuickStart.  Includes MongoDB Backend and NodeJS Frontend.",
   "main": "server.js",
